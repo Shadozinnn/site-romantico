@@ -10,23 +10,26 @@
       background: linear-gradient(135deg, #ff9a8b, #ff6a95);
       color: white;
       text-align: center;
-      padding: 60px 20px;
-      height: 100vh;
+      padding: 40px 15px; /* menos padding pra telas pequenas */
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      box-sizing: border-box;
     }
 
     .texto {
       background-color: rgba(255, 255, 255, 0.1);
       padding: 25px;
       border-radius: 15px;
+      width: 100%;
       max-width: 600px;
       font-size: 18px;
       line-height: 1.7;
       box-shadow: 0 0 10px rgba(255,255,255,0.3);
       animation: aparecer 1.5s ease;
+      box-sizing: border-box;
     }
 
     @keyframes aparecer {
@@ -46,6 +49,22 @@
 
     a:hover {
       background-color: rgba(0,0,0,0.4);
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 20px 10px;
+      }
+
+      .texto {
+        font-size: 16px;
+        padding: 20px;
+      }
+
+      a {
+        font-size: 16px;
+        padding: 8px 16px;
+      }
     }
   </style>
 </head>
